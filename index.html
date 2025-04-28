@@ -11,10 +11,26 @@
 <script>
     getComputerChoice()
     function getComputerChoice() {
-        let compValue = Math.floor(Math.random() * 3);
-        return compValue;
+        return Math.floor(Math.random() * 3);
     }
 
+    function getHumanChoice() {
+        let humanChoice = prompt("Please enter your value here. (Enter 'Rock', 'Paper', or 'Scissors')");
+        humanChoice = humanChoice.toLowerCase()
+        humanChoice = humanChoice.trim()
+
+        if (humanChoice = "rock") {
+            humanChoice = 0;
+        } else if (humanChoice = "paper") {
+            humanChoice = 1;
+        } else {
+            humanChoice = 2;
+        }
+
+        return humanChoice;
+    }
+
+    console.log(getHumanChoice())
     console.log(getComputerChoice())
 </script>
 </html>
